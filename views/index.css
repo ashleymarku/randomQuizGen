@@ -9,6 +9,46 @@ body {
 	font-weight: 200;
 }
 
+h1 {
+
+	text-align: center;
+	font-family: "Comic Sans MS";
+	color: #F4C2C2;
+	padding-top: 50px;
+}
+
+#title1 {
+	text-align: center;
+	font-family: "Comic Sans MS";
+	color: #93ba39;
+	margin-bottom: 25px;
+
+
+}
+
+.quizB {
+
+	
+	
+	height:100%;
+	background: url(images/kawaii.png) no-repeat center center fixed;
+   background-size: cover;   
+
+}
+
+#push {
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#buffalo {
+	position: absolute;
+	right: 0px;
+	bottom: 0px
+}
+
 .login {
 	
 	position: relative;
@@ -74,17 +114,91 @@ body {
 
 }
 
-.feedback {
 
-	position: absolute;
-	bottom: 70px;
-	width: 100%;
+
+.quizStart {
+
+display: block;
+  border-radius: 4px;
+  background-color: #00CED1;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+
+}
+
+.quizStart span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.quizStart span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.quizStart:hover span {
+  padding-right: 25px;
+}
+
+.quizStart:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#board {
+	margin-left: 175px;
+	margin-top: 50px;
+
 	text-align: center;
-	color: #fff;
-	background: #2aaecc;
-	padding: 10px 0px;
-	font-size: 12px;
+	
 	display: none;
-	opacity: 0;
+	height: 500px;
+	width: 600px;
+}
+
+ul {
+	margin: 0 auto;
+
+}
+
+#a, #b, #c, #d {
+
+	background-color: #93ba39;
+	border-radius: 15px 15px 15px 15px;
+	margin-bottom: 10px;
+
+}
+
+#catagory {
+
+	color: #E5FFE4
+}
+
+#type {
+	color: #FFFFE3
+}
+
+#difficulty {
+
+	color: #922bab
+}
+
+#question {
+
+	color: #37abe1
+
 
 }

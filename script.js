@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var ejs = require('ejs');
 
+
 var url = bodyParser.urlencoded({extended:false});
 
 //reads the JSON files information
@@ -26,10 +27,12 @@ app.get('/quiz', function(require, response){
 });
 
 
+
+
 // handles user input and pushes the data into the obj array and writing it 
 // to the JSON file as a string
 
-app.post('/quiz/add/', url, function(request, response){
+app.post('/quiz/add', url, function(request, response){
 
 	var emailinfo = request.body.emaillogin;
 	var passwordinfo = request.body.passwordlogin;
@@ -43,9 +46,18 @@ app.post('/quiz/add/', url, function(request, response){
        return;
    };
    console.log("File has been created");
+   response.redirect('/quiz/add')
+   
 });
 
 })
+
+app.get('/quiz/add', function(require, response){
+	response.render('api.ejs');
+
+});
+
+
 
 
 // our local host port, displays "listening" in the terminal to ensure its working
